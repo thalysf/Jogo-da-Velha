@@ -9,6 +9,7 @@
 body{
     background-image: url('../img/background/background.png');
     min-height: 100vh;
+    overflow: hidden;
 }
 
 /* Palco */
@@ -131,4 +132,22 @@ i.hovercel
 .col-md-4:hover > i.hovercel
 {
     color: #607bc56b !important;
+}
+/* Rodapé */
+footer p{
+    color: thistle;
+    position: absolute;
+    font-size: .8rem;
+    bottom: -20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+footer p a{
+    text-decoration: none !important;
+    transition: .2s;
+}
+footer p a:hover{
+    text-decoration: none !important;
+    transition: .2s;
+    color:#74c7fc;
 }
