@@ -1,0 +1,53 @@
+@media screen and (max-width: 984px)
+{
+    .area-jogo-da-velha{
+        height: 80vh;
+        width: 65vw;
+    }
+    i:not(#closeBtn){
+        font-size: 6rem;
+    }
+    .area-jogo-da-velha .col-md-4{
+        height: 26.66vh;
+    }
+}
+@media screen and (max-width: 769px)
+{
+    .area-jogo-da-velha{
+        height: 70vh;
+        width: 70vw;
+    }
+    .area-jogo-da-velha .col-md-4{
+        height: 23.33vh;
+        width: 33.33%;
+    }
+}
+@media screen and (max-width: 560px)
+{
+    .area-jogo-da-velha{
+        height: 60vh;
+        width: 80vw;
+    }
+    .area-jogo-da-velha .col-md-4{
+        height: 20vh;
+    }
+}
+@media screen and (max-width: 400px)
+{
+    .area-jogo-da-velha{
+        height: 52vh;
+        width: 80vw;
+    }
+    .area-jogo-da-velha .col-md-4{
+        height: 16.66vh;
+    }
+    i:not(#closeBtn){
+        font-size: 4.5rem;
+    }
+}
+@media screen and (max-height: 398px)
+{
+    i:not(#closeBtn){
+        font-size: 4.2rem;
+    }
+}

@@ -1,0 +1,30 @@
+p#som{
+    position: fixed;
+    top: 50px;
+    right: 50px; 
+}
+p#refresh{
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+p i{
+    font-size: 3rem !important;
+    transition: .2s;
+    cursor: pointer;
+}
+p#som i.fa-volume-up{
+    color: #74c7fc !important;
+}
+p#som i.fa-volume-mute{
+    color: rgb(216, 41, 18) !important;
+}
+p#refresh i{
+    color: #74c7fc !important;
+}
+p#refresh i:hover, p#som i.fa-volume-up:hover{
+    color: #16a4fd !important;
+}
+p#som i.fa-volume-mute:hover{
+    color: rgb(255, 31, 1) !important;
+}

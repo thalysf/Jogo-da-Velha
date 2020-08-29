@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+/* Estilos Gerais */
+*{
+    font-family: 'Balsamiq Sans', cursive;
+    box-sizing: border-box;
+    font-size: normal;
+    color: #343434;
+}
+body{
+    background-image: url('../img/background/background.png');
+    min-height: 100vh;
+}
+
+/* Palco */
+.area-jogo-da-velha{
+    border-radius: .30rem;
+    background-color: #2e5077ef;
+    margin: 0;
+    position: absolute;               
+    top: 50%;       
+    left: 50%;                  
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 50vw;
+    box-shadow: 1px 1px 10px #7065b183;
+}
+/* Cells */
+.area-jogo-da-velha .col-md-4
+{
+    height: 30vh;
+}
+.area-jogo-da-velha #c00
+{
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c01
+{
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c02
+{
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c10
+{
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c11
+{
+    border-right: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c12
+{
+    border-bottom: 5px solid #fff;
+}
+.area-jogo-da-velha #c20
+{
+    border-right: 5px solid #fff;
+}
+.area-jogo-da-velha #c21
+{
+    border-right: 5px solid #fff;
+}
+/*X and Circle*/
+i:not(#closeBtn){
+    font-size: 7rem;
+    position: absolute;               
+    top: 50%;       
+    left: 50%;                  
+    transform: translate(-50%, -50%);
+}
+.fa-times:not(#closeBtn){
+    color: #74c7fc;
+}
+.fa-circle{
+    color: #ff90b3;
+}
+/*Modal*/
+div#exibeVencedor .modal-dialog .modal-content{
+    background-color: #0d0d0d2d;
+}
+.modal-content p{
+    text-indent: 20px;
+}
+button#btn-modal{
+    display: none;
+}
+i#closeBtn{
+    color: red;
+    text-shadow: none;
+    transition: linear all .1s;
+}
+div.modal-header h5{
+    color: #fff;
+    margin: 0 auto;
+    font-size: 2rem;
+}
+div.modal-header{
+    margin-bottom: 4rem;
+}
+div.modal-body i{
+    color: yellow;
+    text-shadow: 1px 1px 4px rgba(167, 127, 19, 0.781);
+}
+.empate{
+    color: #e40000 !important;
+}
+.machineWin{
+    color: #16b3be !important;
+    text-shadow: 1px 1px 4px rgba(19, 31, 87, 0.781);
+}
+div.modal-footer{
+    margin-top: 4rem;
+}
+div.modal-footer, div.modal-header{
+    border: none;
+}
+/*Efeitos nas celulas*/
+.efects{
+    cursor: pointer;
+}
+i.hovercel
+{
+    color: transparent !important;
+    transition: all linear .2s;
+}
+.col-md-4:hover > i.hovercel
+{
+    color: #607bc56b !important;
+}
