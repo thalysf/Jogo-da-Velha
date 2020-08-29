@@ -141,6 +141,8 @@ footer p{
     bottom: -20px;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 footer p a{
     text-decoration: none !important;
