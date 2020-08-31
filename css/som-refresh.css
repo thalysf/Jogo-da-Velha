@@ -1,3 +1,6 @@
+:root{
+    --main-blue-color: #74c7fc; 
+}
 p#som{
     position: fixed;
     top: 50px;
@@ -14,13 +17,13 @@ p i{
     cursor: pointer;
 }
 p#som i.fa-volume-up{
-    color: #74c7fc !important;
+    color: var(--main-blue-color) !important;
 }
 p#som i.fa-volume-mute{
     color: rgb(216, 41, 18) !important;
 }
 p#refresh i{
-    color: #74c7fc !important;
+    color: var(--main-blue-color) !important;
 }
 p#refresh i:hover, p#som i.fa-volume-up:hover{
     color: #16a4fd !important;

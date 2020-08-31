@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+:root{
+    --main-blue-color: #74c7fc; 
+}
 /* Estilos Gerais */
 *{
     font-family: 'Balsamiq Sans', cursive;
@@ -75,7 +78,7 @@ i:not(#closeBtn){
     transform: translate(-50%, -50%);
 }
 .fa-times:not(#closeBtn){
-    color: #74c7fc;
+    color: var(--main-blue-color);
 }
 .fa-circle{
     color: #ff90b3;
@@ -151,5 +154,5 @@ footer p a{
 footer p a:hover{
     text-decoration: none !important;
     transition: .2s;
-    color:#74c7fc;
+    color: var(--main-blue-color);
 }
