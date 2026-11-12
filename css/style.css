@@ -1,158 +1,234 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
-:root{
-    --main-blue-color: #74c7fc; 
+
+:root {
+    --main-blue-color: #74c7fc;
+    --pink-color: #ff90b3;
+    --dark-blue: #203d60;
+    --white: #ffffff;
 }
-/* Estilos Gerais */
-*{
+
+/* Estilos gerais */
+* {
     font-family: 'Balsamiq Sans', cursive;
     box-sizing: border-box;
-    font-size: normal;
     color: #343434;
 }
-body{
+
+body {
     background-image: url('../img/background/background.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     min-height: 100vh;
     overflow: hidden;
 }
 
-/* Palco */
-.area-jogo-da-velha{
-    border-radius: .30rem;
-    background-color: #2e5077ef;
+/* Palco do jogo */
+.area-jogo-da-velha {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #2e5077f2, #203d60f5);
     margin: 0;
-    position: absolute;               
-    top: 50%;       
-    left: 50%;                  
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     height: 90vh;
     width: 50vw;
-    box-shadow: 1px 1px 10px #7065b183;
+    box-shadow: 0 10px 30px #1c2c4d80;
+    padding: 10px;
+    transition: box-shadow 0.3s ease;
 }
-/* Cells */
-.area-jogo-da-velha .col-md-4
-{
+
+.area-jogo-da-velha:hover {
+    box-shadow: 0 14px 35px #1c2c4da8;
+}
+
+/* Células */
+.area-jogo-da-velha .col-md-4 {
     height: 30vh;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
 }
-.area-jogo-da-velha #c00
-{
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid #fff;
+
+.area-jogo-da-velha .col-md-4:hover {
+    background-color: #ffffff12;
 }
-.area-jogo-da-velha #c01
-{
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid #fff;
+
+.area-jogo-da-velha #c00,
+.area-jogo-da-velha #c01,
+.area-jogo-da-velha #c10,
+.area-jogo-da-velha #c11 {
+    border-right: 4px solid var(--white);
+    border-bottom: 4px solid var(--white);
 }
-.area-jogo-da-velha #c02
-{
-    border-bottom: 5px solid #fff;
+
+.area-jogo-da-velha #c02,
+.area-jogo-da-velha #c12 {
+    border-bottom: 4px solid var(--white);
 }
-.area-jogo-da-velha #c10
-{
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid #fff;
+
+.area-jogo-da-velha #c20,
+.area-jogo-da-velha #c21 {
+    border-right: 4px solid var(--white);
 }
-.area-jogo-da-velha #c11
-{
-    border-right: 5px solid #fff;
-    border-bottom: 5px solid #fff;
-}
-.area-jogo-da-velha #c12
-{
-    border-bottom: 5px solid #fff;
-}
-.area-jogo-da-velha #c20
-{
-    border-right: 5px solid #fff;
-}
-.area-jogo-da-velha #c21
-{
-    border-right: 5px solid #fff;
-}
-/*X and Circle*/
-i:not(#closeBtn){
+
+/* X e círculo */
+i:not(#closeBtn) {
     font-size: 7rem;
-    position: absolute;               
-    top: 50%;       
-    left: 50%;                  
+    position: absolute;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
+    transition: transform 0.25s ease;
 }
-.fa-times:not(#closeBtn){
+
+.fa-times:not(#closeBtn) {
     color: var(--main-blue-color);
+    text-shadow: 0 0 12px #74c7fc70;
 }
-.fa-circle{
-    color: #ff90b3;
+
+.fa-circle {
+    color: var(--pink-color);
+    text-shadow: 0 0 12px #ff90b370;
 }
-/*Modal*/
-div#exibeVencedor .modal-dialog .modal-content{
-    background-color: #0d0d0d2d;
+
+/* Efeito ao passar o mouse */
+.efects {
+    cursor: pointer;
 }
-.modal-content p{
+
+i.hovercel {
+    color: transparent !important;
+    transition: all 0.25s ease;
+}
+
+.col-md-4:hover > i.hovercel {
+    color: #74c7fc80 !important;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Modal */
+div#exibeVencedor .modal-dialog .modal-content {
+    background-color: #203d60f2;
+    border: 1px solid #ffffff30;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px #00000040;
+}
+
+.modal-content p {
     text-indent: 20px;
+    color: var(--white);
 }
-button#btn-modal{
+
+button#btn-modal {
     display: none;
 }
-i#closeBtn{
-    color: red;
+
+i#closeBtn {
+    color: #ff7070;
     text-shadow: none;
-    transition: linear all .1s;
+    transition: all 0.2s ease;
 }
-div.modal-header h5{
-    color: #fff;
+
+i#closeBtn:hover {
+    color: #ff3333;
+    transform: scale(1.15);
+}
+
+div.modal-header h5 {
+    color: var(--white);
     margin: 0 auto;
     font-size: 2rem;
 }
-div.modal-header{
+
+div.modal-header {
     margin-bottom: 4rem;
 }
-div.modal-body i{
-    color: yellow;
+
+div.modal-body i {
+    color: #ffe066;
     text-shadow: 1px 1px 4px rgba(167, 127, 19, 0.781);
 }
-.empate{
-    color: #e40000 !important;
+
+.empate {
+    color: #ff7070 !important;
 }
-.machineWin{
-    color: #16b3be !important;
+
+.machineWin {
+    color: #74e0e5 !important;
     text-shadow: 1px 1px 4px rgba(19, 31, 87, 0.781);
 }
-div.modal-footer{
+
+div.modal-footer {
     margin-top: 4rem;
 }
-div.modal-footer, div.modal-header{
+
+div.modal-footer,
+div.modal-header {
     border: none;
 }
-/*Efeitos nas celulas*/
-.efects{
+
+/* Botões */
+button {
     cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    background-color: var(--main-blue-color);
+    color: #203d60;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-i.hovercel
-{
-    color: transparent !important;
-    transition: all linear .2s;
+
+button:hover {
+    background-color: #a0dcff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px #00000030;
 }
-.col-md-4:hover > i.hovercel
-{
-    color: #607bc56b !important;
+
+button:active {
+    transform: scale(0.97);
 }
+
 /* Rodapé */
-footer p{
+footer p {
     color: thistle;
     position: absolute;
-    font-size: .8rem;
+    font-size: 0.8rem;
     bottom: -20px;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     width: 100%;
 }
-footer p a{
+
+footer p a {
     text-decoration: none !important;
-    transition: .2s;
+    transition: color 0.2s ease;
 }
-footer p a:hover{
-    text-decoration: none !important;
-    transition: .2s;
+
+footer p a:hover {
     color: var(--main-blue-color);
+}
+
+/* Adaptação para celulares */
+@media (max-width: 768px) {
+    .area-jogo-da-velha {
+        width: 90vw;
+        height: 75vh;
+    }
+
+    .area-jogo-da-velha .col-md-4 {
+        height: 25vh;
+    }
+
+    i:not(#closeBtn) {
+        font-size: 4rem;
+    }
+
+    div.modal-header h5 {
+        font-size: 1.5rem;
+    }
 }
